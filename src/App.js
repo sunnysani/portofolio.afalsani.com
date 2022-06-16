@@ -45,7 +45,7 @@ function App() {
       <section>
         <p>
           <a href="https://drive.google.com/drive/folders/1TdoJH1L4BRmU8w1TtZAYdh46REOXhcig?usp=sharing">
-            Click here to see my CV
+            Click here to see my CV/Resume
           </a>
         </p>
         <p>
