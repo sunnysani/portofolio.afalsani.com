@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import MainPage from "./Store/pages/Main";
+import StoreRoute from "./applications/Store/StoreRoute";
 
 import Tmp from "./Tmp";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Tmp />} />
-      <Route path="/store" element={<MainPage />} />
+      {StoreRoute}
     </Routes>
   );
 }

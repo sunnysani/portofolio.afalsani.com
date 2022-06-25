@@ -1,0 +1,73 @@
+.yourCheckout {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.item,
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item p {
+  margin: 1rem 0 0 0;
+}
+
+.total p {
+  margin: 0;
+}
+
+.total i {
+  display: none;
+}
+
+.main button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: var(--store-blue);
+  cursor: pointer;
+}
+
+.main button:hover {
+  background-color: var(--store-blue-dark);
+}
+
+@media screen and (max-width: 720px) {
+  .item {
+    display: none;
+  }
+
+  .yourCheckout {
+    display: none;
+  }
+
+  .main hr {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .total {
+    display: block;
+  }
+
+  .total i {
+    display: inline;
+  }
+
+  .content button {
+    margin: 0;
+    width: 10rem;
+  }
+}

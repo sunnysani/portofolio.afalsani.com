@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import StoreList from "../components/store/StoreList";
 
+// TODO CREATE HOOK TO API
 const DUMMYDATA_ITEMS = {
   store1: {
     name: "House Goods",
@@ -14,6 +15,8 @@ const DUMMYDATA_ITEMS = {
           images: [
             "https://lh3.googleusercontent.com/d/1mNiS3ywkMVKGbsCT1ibbolgXRYh_-QI_",
           ],
+          price: 4.99,
+          isAddedToCart: true,
         },
       },
       {
@@ -26,6 +29,8 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1GVxtHf_OKMjoHOUL_vxhah5rpS6xid3R",
             "https://lh3.googleusercontent.com/d/1yZo1Ep4SilRWHStgCegpmcVV5lOfLMRs",
           ],
+          price: 4.99,
+          isAddedToCart: false,
         },
       },
       {
@@ -36,6 +41,8 @@ const DUMMYDATA_ITEMS = {
           images: [
             "https://lh3.googleusercontent.com/d/1f0tWGifTnwoI-BLhp5Ys4NwiwnZu6fcA",
           ],
+          price: 4.99,
+          isAddedToCart: false,
         },
       },
       {
@@ -48,6 +55,8 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/17YG-tBa6KoKAakgJhF2aZv6CK3vFPSn2",
             "https://lh3.googleusercontent.com/d/1h6Ojou_dJaH7nFIBPFissX-SVRdQlaBZ",
           ],
+          price: 29.99,
+          isAddedToCart: false,
         },
       },
       {
@@ -59,6 +68,8 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1BSNBkJeLdiw-pcBOS2KrY6YeFnfCZRWT",
             "https://lh3.googleusercontent.com/d/1_vIuqYwY0CwL_fxlwneMxtWR_yFyLcUO",
           ],
+          price: 19.99,
+          isAddedToCart: false,
         },
       },
       {
@@ -71,6 +82,8 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1ZMGgF9rcOM0hUQJvH-s2WSHKlWcSb6yB",
             "https://lh3.googleusercontent.com/d/13M0CwdFbeqveFm47rHe49E4uZZLnyBqm",
           ],
+          price: 4.99,
+          isAddedToCart: false,
         },
       },
     ],

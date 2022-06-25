@@ -1,0 +1,16 @@
+.actionBar {
+  position: fixed;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.actionBarItem {
+  background-color: rgba(255, 255, 0, 0.8);
+  color: black;
+  letter-spacing: 0.1rem;
+  padding: 1rem 2rem;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+}

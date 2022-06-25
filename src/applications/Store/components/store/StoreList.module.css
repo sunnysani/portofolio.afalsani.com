@@ -1,0 +1,73 @@
+.storeName {
+  font-size: 2rem;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  transition: 0.1s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.storeName a {
+  color: inherit;
+  text-decoration: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.storeName:hover {
+  color: var(--store-red);
+}
+
+.rightDissappearAnimation,
+.rightAppearAnimation {
+  position: absolute;
+  right: -2rem;
+  height: 100%;
+}
+
+.rightAppearAnimation {
+  opacity: 0;
+}
+
+.rightDissappearAnimation {
+  opacity: 1;
+}
+
+.storeName a:hover > .rightDissappearAnimation {
+  opacity: 0;
+}
+
+.storeName a:hover > .rightAppearAnimation {
+  -webkit-animation: flip-in-ver-right 0.5s ease-in-out both;
+  animation: flip-in-ver-right 0.5s ease-in-out both;
+}
+
+@-webkit-keyframes flip-in-ver-right {
+  from {
+    -webkit-transform: rotateY(-80deg);
+    transform: rotateY(-80deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-ver-right {
+  from {
+    -webkit-transform: rotateY(-80deg);
+    transform: rotateY(-80deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+.storeItemsContainer {
+  display: flex;
+  overflow-x: scroll;
+}

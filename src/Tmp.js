@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import LinkedinLogo from "./assets/SocialMedia/Linkedin.png";
 import InstagramLogo from "./assets/SocialMedia/Instagram.png";
 import GithubLogo from "./assets/SocialMedia/Github.png";
@@ -25,6 +27,21 @@ function Tmp() {
           This website is currently being built by me to showcase what I've
           built. But for now, you can know me more from links below.
         </p>
+      </section>
+      <hr />
+      <section>
+        See my store application progress! (35%)
+        <br />
+        <Link to="/store">Click here!</Link>
+        <br></br>
+        <p style={{ "text-align": "center", margin: "12px 0 0 0" }}>
+          Progress:
+        </p>
+        <ul style={{ width: "50%", margin: "auto", textAlign: "left" }}>
+          <li>Still uses dummy data</li>
+          <li>Able to use Cart functionality only</li>
+          <li>Cart checkout objects still a dummy data</li>
+        </ul>
       </section>
       <hr />
       <section>

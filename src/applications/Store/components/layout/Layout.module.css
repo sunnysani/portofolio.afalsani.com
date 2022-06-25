@@ -1,0 +1,14 @@
+.content {
+  margin: 4rem 6rem;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    margin: 4rem 4rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .content {
+    margin: 4rem 2rem;
+  }
+}

@@ -1,0 +1,50 @@
+.main {
+  display: block;
+}
+
+.storeSection {
+  display: flex;
+  align-items: center;
+}
+
+.storeSection span {
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+}
+
+.storeItems {
+  margin: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.storeItem {
+  display: flex;
+  align-items: center;
+}
+
+.itemImg {
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.itemImg img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.itemText p {
+  margin: 0;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,53 @@
+.storeItem {
+  padding: 1rem 2rem;
+}
+
+.storeItem img {
+  width: 120px;
+  height: 120px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.itemName {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 3rem;
+  line-height: 1.5rem;
+}
+
+.itemName,
+.itemPrice {
+  margin: 0;
+}
+
+.itemActionArea {
+  font-size: 1.5rem;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.cartAction {
+  cursor: pointer;
+}
+
+.itemActionArea button {
+  font: inherit;
+  background: var(--store-blue);
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 0.5rem;
+}
+
+.itemActionArea button:hover {
+  background-color: var(--store-blue-dark);
+}

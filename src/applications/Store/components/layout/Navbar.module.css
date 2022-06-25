@@ -1,0 +1,114 @@
+.header {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0 10%;
+}
+
+.logo {
+  color: black;
+  font-size: 2rem;
+}
+
+.sidebar {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.cart {
+  position: relative;
+  color: black;
+}
+
+.item_count {
+  position: absolute;
+  top: -0.8rem;
+  right: -0.8rem;
+  font-size: 0.8rem;
+  background-color: var(--store-red);
+  color: white;
+  padding: 0.2rem;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+}
+
+.logo:hover,
+.cart:hover {
+  color: var(--store-red);
+  cursor: pointer;
+}
+
+.jelloHorizontal {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+.jelloHorizontal:hover {
+  -webkit-animation-name: wobble-hor-bottom;
+  animation-name: wobble-hor-bottom;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-5px) rotate(-6deg);
+    transform: translateX(-5px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(2.5px) rotate(6deg);
+    transform: translateX(2.5px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-1.5px) rotate(-3.6deg);
+    transform: translateX(-1.5px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(1px) rotate(2.4deg);
+    transform: translateX(1px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-0.4x) rotate(-1.2deg);
+    transform: translateX(-0.4px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-5px) rotate(-6deg);
+    transform: translateX(-5px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(2.5px) rotate(6deg);
+    transform: translateX(2.5px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-1.5px) rotate(-3.6deg);
+    transform: translateX(-1.5px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(1px) rotate(2.4deg);
+    transform: translateX(1px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-0.5px) rotate(-1.2deg);
+    transform: translateX(-0.5px) rotate(-1.2deg);
+  }
+}

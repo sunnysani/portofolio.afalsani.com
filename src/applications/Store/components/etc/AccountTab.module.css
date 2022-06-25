@@ -1,0 +1,58 @@
+.account {
+  margin-left: 1.5rem;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.account span {
+  align-items: center;
+  font-size: 1rem;
+}
+
+.account:hover {
+  color: var(--store-red);
+  cursor: pointer;
+}
+
+.account_tab {
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 1;
+}
+
+.account_tab a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.history {
+  padding-bottom: 0.8rem;
+}
+.changeaccount {
+  cursor: pointer;
+}
+
+.history,
+.changeaccount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history:hover,
+.changeaccount:hover {
+  color: var(--store-red);
+}
+
+.history span,
+.changeaccount span {
+  font-size: 1rem;
+}
