@@ -1,35 +1,26 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import classes from "./CartContainer.module.css";
 import CartCheckout from "./CartCheckout";
 import Card from "../ui/Card";
 import CartItem from "./CartItem";
 import { BsCartXFill } from "react-icons/bs";
+import Empty from "../etc/Empty";
+import StoreCartContext from "../../context/store-cart-context";
 
 function CartContainer(props) {
-  const [checkoutedItems, setCheckoutedItems] = useState([
-    { id: 1, name: "Magical Wok", quantity: 2, price: 3.99 },
-    { id: 2, name: "Magical Kow", quantity: 4, price: 3.99 },
-    { id: 3, name: "Magical Owk", quantity: 1, price: 3.99 },
-  ]);
+  const [checkoutedItems, setCheckoutedItems] = useState(
+    props.checkoutedItems ?? []
+  );
+  const storeCartContext = useContext(StoreCartContext);
 
-  if (!props.items.length)
-    return (
-      <Card>
-        <div className={classes.empty}>
-          <div className={classes.wobbleHorBottom}>
-            <BsCartXFill />
-          </div>
-
-          <p>There is no item in your cart.</p>
-          <Link to="/store">Start shoping!</Link>
-        </div>
-      </Card>
-    );
+  function removeCheckoutItem(itemId) {
+    setCheckoutedItems((prev) => prev.filter((item) => item !== itemId));
+  }
 
   const cartContent = {};
-  props.items.forEach((item) => {
+  storeCartContext.items.forEach((item) => {
     // Init store if dont exist yet
     const storeId = item.store.id;
     if (!cartContent[storeId]) {
@@ -49,7 +40,34 @@ function CartContainer(props) {
     cartContent[storeId].items.push(tmp);
   });
 
-  return (
+  function isCheckouted(itemId) {
+    return checkoutedItems.some((item) => item === itemId);
+  }
+
+  function onClickButtonFunction(itemId) {
+    // delete if is in the list
+    if (checkoutedItems.some((item) => item === itemId)) {
+      setCheckoutedItems((prev) => prev.filter((item) => item !== itemId));
+      return;
+    }
+
+    // check if store is the same
+    if (checkoutedItems.length) {
+      const storeId = storeCartContext.getStoreById(checkoutedItems[0]);
+      if (storeCartContext.getStoreById(itemId) === storeId) {
+        setCheckoutedItems((prev) => prev.concat(itemId));
+        return;
+      }
+    }
+    setCheckoutedItems([itemId]);
+  }
+
+  return !storeCartContext.items.length ? (
+    <Empty img={<BsCartXFill />}>
+      <p>There is no item in your cart.</p>
+      <Link to="/store">Start shoping</Link>
+    </Empty>
+  ) : (
     <div className={classes.cartContainer}>
       <div className={classes.leftSide}>
         <Card>
@@ -58,32 +76,24 @@ function CartContainer(props) {
               return (
                 <CartItem
                   key={key}
+                  storeId={key}
                   storeName={value.name}
                   items={value.items}
+                  isCheckoutedFunction={isCheckouted}
+                  onClickButtonFunction={onClickButtonFunction}
                 />
               );
             })}
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </div>
         </Card>
       </div>
       <div className={classes.rightSide}>
         <Card>
           <div className={classes.rightSideContent}>
-            <CartCheckout items={checkoutedItems} />
+            <CartCheckout
+              items={checkoutedItems}
+              removeCheckoutItem={removeCheckoutItem}
+            />
           </div>
         </Card>
       </div>

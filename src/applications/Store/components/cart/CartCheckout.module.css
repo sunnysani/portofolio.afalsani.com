@@ -39,6 +39,10 @@
   background-color: var(--store-blue-dark);
 }
 
+.noItem {
+  display: block;
+}
+
 @media screen and (max-width: 720px) {
   .item {
     display: none;
@@ -69,5 +73,9 @@
   .content button {
     margin: 0;
     width: 10rem;
+  }
+
+  .noItem {
+    display: none;
   }
 }

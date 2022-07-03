@@ -1,6 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { BsPerson, BsCardText, BsPeople, BsCashCoin } from "react-icons/bs";
+import {
+  BsPerson,
+  BsPeople,
+  BsCashCoin,
+  BsFillBagCheckFill,
+} from "react-icons/bs";
 import { useState, useRef, useEffect } from "react";
 
 import classes from "./AccountTab.module.css";
@@ -41,7 +46,7 @@ function AccountTab() {
       >
         <Link to="/store/purchases">
           <div className={classes.history}>
-            <BsCardText />
+            <BsFillBagCheckFill />
             <span>My Purchases</span>
           </div>
         </Link>

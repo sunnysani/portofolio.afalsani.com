@@ -16,7 +16,13 @@ function CartItem(props) {
           const itemObject = Object.values(item)[0];
           return (
             <div className={classes.storeItem} key={itemObjectId}>
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={props.isCheckoutedFunction(itemObjectId)}
+                onChange={() => {
+                  return props.onClickButtonFunction(itemObjectId);
+                }}
+              />
               <div className={classes.itemImg}>
                 <Card>
                   <img
@@ -32,8 +38,7 @@ function CartItem(props) {
                 <div className={classes.option}>
                   <CartObject
                     item={{
-                      // Store must be set later!
-                      store: {},
+                      store: { id: props.storeId, name: props.storeName },
                       id: itemObjectId,
                       name: itemObject.name,
                       images: itemObject.images,

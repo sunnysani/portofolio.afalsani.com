@@ -7,7 +7,7 @@ import AccountTab from "../etc/AccountTab";
 import classes from "./Navbar.module.css";
 import StoreCartContext from "../../context/store-cart-context";
 
-function Navbar(props) {
+function Navbar() {
   const storeCartProvider = useContext(StoreCartContext);
 
   return (

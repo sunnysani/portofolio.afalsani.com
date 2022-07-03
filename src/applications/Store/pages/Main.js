@@ -16,7 +16,6 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1mNiS3ywkMVKGbsCT1ibbolgXRYh_-QI_",
           ],
           price: 4.99,
-          isAddedToCart: true,
         },
       },
       {
@@ -30,7 +29,6 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1yZo1Ep4SilRWHStgCegpmcVV5lOfLMRs",
           ],
           price: 4.99,
-          isAddedToCart: false,
         },
       },
       {
@@ -42,7 +40,6 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1f0tWGifTnwoI-BLhp5Ys4NwiwnZu6fcA",
           ],
           price: 4.99,
-          isAddedToCart: false,
         },
       },
       {
@@ -56,7 +53,6 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1h6Ojou_dJaH7nFIBPFissX-SVRdQlaBZ",
           ],
           price: 29.99,
-          isAddedToCart: false,
         },
       },
       {
@@ -69,7 +65,6 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/1_vIuqYwY0CwL_fxlwneMxtWR_yFyLcUO",
           ],
           price: 19.99,
-          isAddedToCart: false,
         },
       },
       {
@@ -83,7 +78,36 @@ const DUMMYDATA_ITEMS = {
             "https://lh3.googleusercontent.com/d/13M0CwdFbeqveFm47rHe49E4uZZLnyBqm",
           ],
           price: 4.99,
-          isAddedToCart: false,
+        },
+      },
+    ],
+  },
+  store2: {
+    name: "House Goods 2",
+    description: "We provide all kinds of equipment for your home",
+    items: [
+      {
+        7: {
+          name: "Magical Broom",
+          description:
+            "A broom is a cleaning tool consisting of usually stiff fibers attached to, and roughly parallel to, a cylindrical handle, the broomstick.",
+          images: [
+            "https://lh3.googleusercontent.com/d/1mNiS3ywkMVKGbsCT1ibbolgXRYh_-QI_",
+          ],
+          price: 5.99,
+        },
+      },
+      {
+        8: {
+          name: "Magical Bucket",
+          description:
+            "A bucket is a container with a wide open top and a handle that is mainly used for carrying liquids. In some cases, solids may also be carried in a bucket (like sand which is hard to carry in your hands).",
+          images: [
+            "https://lh3.googleusercontent.com/d/1ET2sFVicyvvSl_z-_wPqF779GXQirHYO",
+            "https://lh3.googleusercontent.com/d/1GVxtHf_OKMjoHOUL_vxhah5rpS6xid3R",
+            "https://lh3.googleusercontent.com/d/1yZo1Ep4SilRWHStgCegpmcVV5lOfLMRs",
+          ],
+          price: 5.99,
         },
       },
     ],

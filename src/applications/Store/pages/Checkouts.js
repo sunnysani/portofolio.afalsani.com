@@ -1,9 +1,19 @@
+import { useEffect, useState } from "react";
+
+import CheckoutsContainer from "../components/checkouts/CheckoutsContainer";
 import Layout from "../components/layout/Layout";
 
-function Checkouts(props) {
+function Checkouts() {
+  const [items, setItems] = useState([]);
+
+  // update if there is a backend useEffect
+  useEffect(() => {
+    setItems([]);
+  }, []);
+
   return (
     <Layout>
-      <div>Checkouts</div>
+      <CheckoutsContainer items={items} />
     </Layout>
   );
 }

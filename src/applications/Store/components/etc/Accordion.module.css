@@ -1,0 +1,22 @@
+.heading {
+  text-align: left;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.subHeading {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.content {
+  display: none;
+}
+
+.show {
+  display: block;
+}

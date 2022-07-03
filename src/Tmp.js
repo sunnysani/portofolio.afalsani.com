@@ -30,7 +30,7 @@ function Tmp() {
       </section>
       <hr />
       <section>
-        See my store application progress! (35%)
+        See my store application progress! (45%)
         <br />
         <Link to="/store">Click here!</Link>
         <br></br>
@@ -38,9 +38,8 @@ function Tmp() {
           Progress:
         </p>
         <ul style={{ width: "50%", margin: "auto", textAlign: "left" }}>
-          <li>Still uses dummy data</li>
-          <li>Able to use Cart functionality only</li>
-          <li>Cart checkout objects still a dummy data</li>
+          <li>Checkouts and Purchases left - Frontend wise</li>
+          <li>Does not have backend server yet</li>
         </ul>
       </section>
       <hr />

@@ -6,7 +6,9 @@ import classes from "./QuantityBox.module.css";
 
 function QuantityBox(props) {
   const storeCartContext = useContext(StoreCartContext);
-  const [quantity, setQuantity] = useState(props.quantity ? props.quantity : 1);
+  const [quantity, setQuantity] = useState(
+    storeCartContext.getQuantity(props.id)
+  );
 
   useEffect(() => {
     storeCartContext.setQuantity(props.id, quantity);

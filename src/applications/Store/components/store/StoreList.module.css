@@ -5,6 +5,7 @@
   height: fit-content;
   transition: 0.1s ease-in-out;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .storeName a {
