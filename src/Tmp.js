@@ -30,6 +30,14 @@ function Tmp() {
       </section>
       <hr />
       <section>
+        <p>Checkout Suitmedia Internship page that i made!</p>
+        <p>
+          It is a landing page for a company:{" "}
+          <a href="https://afalsani.com">https://afalsani.com</a>
+        </p>
+      </section>
+      <hr />
+      <section>
         See my store application progress! (45%)
         <br />
         <Link to="/store">Click here!</Link>
