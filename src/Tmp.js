@@ -15,13 +15,17 @@ function Tmp() {
           <a className="university" href="cs.ui.ac.id">
             Universitas&nbsp;Indonesia
           </a>{" "}
-          for now.
+          for now. This is my last semester! Looking for a job because
+          University doesn't seem to be that busy now.
         </p>
         <p>
-          I code in Python, Java, and Web Necessary (HTML, CSS, Javascript).
-          This website is created using ReactJS Library and managed/deployed on
-          Google Cloud Platform (GCP) with DNS + SSL managed at GCP. Thanks to
-          my Uni who gives GCP credit to the students 😆.
+          I code in Python, Java, Dart (Flutter), and Web Necessary (HTML, CSS,
+          Javascript). This website is created using ReactJS Library and
+          managed/deployed on AWS S3 and managed Route53. <br />
+          <br /> I tried using Google Cloud Platform (GCP) with DNS + SSL
+          managed at GCP. Thanks to my Uni who gives GCP credit to the students
+          😆 But since the GCP credit has ran out, I'm using AWS now. More cheap
+          also!
         </p>
         <p>
           This website is currently being built by me to showcase what I've
@@ -30,18 +34,19 @@ function Tmp() {
       </section>
       <hr />
       <section>
-        <p>Checkout Suitmedia Internship page that i made!</p>
+        <p>Checkout My Main Site!</p>
         <p>
-          It is a landing page for a company:{" "}
-          <a href="https://afalsani.com">https://afalsani.com</a>
+          Visit this first to get to know me 😆:{" "}
+          <a href="http://afalsani.com">http://afalsani.com</a>
         </p>
       </section>
       <hr />
       <section>
-        See my store application progress! (45%)
-        <br />
-        <Link to="/store">Click here!</Link>
-        <br></br>
+        <p style={{ "text-align": "center" }}>
+          See my store application progress! (60%)
+          <br />
+          <Link to="/store">Click here!</Link>
+        </p>
         <p style={{ "text-align": "center", margin: "12px 0 0 0" }}>
           Progress:
         </p>
@@ -68,12 +73,12 @@ function Tmp() {
       <hr />
       <section>
         <p>
-          <a href="https://drive.google.com/drive/folders/1TdoJH1L4BRmU8w1TtZAYdh46REOXhcig?usp=sharing">
+          <a href="https://drive.google.com/file/d/1ystO2jcdtRNTgJ-wEhd_dehbdYDhe2tE/view?usp=share_link">
             Click here to see my CV/Resume
           </a>
         </p>
         <p>
-          <i>@Naufal Sani, 2022</i>
+          <i>@Naufal Sani, 2023</i>
         </p>
       </section>
     </div>
