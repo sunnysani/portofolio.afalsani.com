@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import LinkedinLogo from "./assets/SocialMedia/Linkedin.png";
 import InstagramLogo from "./assets/SocialMedia/Instagram.png";
 import GithubLogo from "./assets/SocialMedia/Github.png";
+import CV from "./assets/CV-Naufal_Sani.pdf";
 
 function Tmp() {
   return (
@@ -72,6 +73,15 @@ function Tmp() {
       </section>
       <hr />
       <section>
+        <div
+          style={{
+            "text-align": "center",
+            "margin-left": "auto",
+            "margin-right": "auto",
+          }}
+        >
+          <embed src={CV} width="600px" height="800px" />
+        </div>
         <p>
           <a href="https://drive.google.com/file/d/1ystO2jcdtRNTgJ-wEhd_dehbdYDhe2tE/view?usp=share_link">
             Click here to see my CV/Resume
