@@ -13,6 +13,7 @@ function Checkouts() {
 
   return (
     <Layout>
+      <h1>Your Checkouts</h1>
       <CheckoutsContainer items={items} />
     </Layout>
   );

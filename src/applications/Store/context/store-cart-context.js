@@ -58,7 +58,6 @@ export function StoreCartProvider(props) {
     items.splice(putIndex, 0, item);
     setItems(items);
     removeItem(null);
-    console.log(items);
   }
 
   function removeItem(itemId) {

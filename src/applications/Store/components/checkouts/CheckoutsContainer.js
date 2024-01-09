@@ -10,23 +10,15 @@ import Card from "../ui/Card";
 import classes from "./CheckoutsContainer.module.css";
 
 function CheckoutsContainer({ items }) {
-  const storeCartContext = useContext(StoreCartContext);
   const storeTemporaryContext = useContext(StoreTemporaryContext);
 
   //   return !items || !items.length ? (
   return !storeTemporaryContext.checkoutItems.length ? (
     <Empty img={<BsCashCoin />}>
-      {!storeCartContext.items.length ? (
-        <>
-          <p>There is no item you have checkout. Try buy some item first!</p>
-          <Link to="/store">Start shoping</Link>
-        </>
-      ) : (
-        <>
-          <p>There is no item you have checkout. Checkout some item first!</p>
-          <Link to="/store/cart">See my cart</Link>
-        </>
-      )}
+      <>
+        <p>There is no item you have checkout. Checkout some item first!</p>
+        <Link to="/store/cart">See my cart</Link>
+      </>
     </Empty>
   ) : (
     <Card>

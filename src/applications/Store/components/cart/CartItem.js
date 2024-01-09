@@ -7,7 +7,13 @@ function CartItem(props) {
   return (
     <div className={classes.main}>
       <div className={classes.storeSection}>
-        <input type="checkbox" />
+        <input 
+          type="checkbox"
+          checked={props.allItemAtStorePurchased(props.storeId)}
+          onChange={() => {
+            return props.onClickStoreButtonFunction(props.storeId)
+          }}
+         />
         <span>{props.storeName}</span>
       </div>
       <div className={classes.storeItems}>
@@ -20,7 +26,7 @@ function CartItem(props) {
                 type="checkbox"
                 checked={props.isCheckoutedFunction(itemObjectId)}
                 onChange={() => {
-                  return props.onClickButtonFunction(itemObjectId);
+                  return props.onClickItemButtonFunction(itemObjectId);
                 }}
               />
               <div className={classes.itemImg}>

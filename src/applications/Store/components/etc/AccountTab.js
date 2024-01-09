@@ -44,12 +44,12 @@ function AccountTab() {
           display: toggleAccount ? "block" : "none",
         }}
       >
-        <Link to="/store/purchases">
+        {/* <Link to="/store/purchases">
           <div className={classes.history}>
             <BsFillBagCheckFill />
             <span>My Purchases</span>
           </div>
-        </Link>
+        </Link> */}
         <Link to="/store/checkouts">
           <div className={classes.history}>
             <BsCashCoin />

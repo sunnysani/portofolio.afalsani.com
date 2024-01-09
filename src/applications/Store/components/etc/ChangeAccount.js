@@ -6,8 +6,9 @@ import classes from "./ChangeAccount.module.css";
 import StoreUsernameContext from "../../context/store-username-context";
 
 function ChangeAccount(props) {
-  const usernameRef = useRef("");
   const storeUsernameContext = useContext(StoreUsernameContext);
+  // TODO: Set initial value same as storeUsernameContext
+  const usernameRef = useRef("");
 
   function changeUsernameHandler() {
     if (usernameRef.current.value) {

@@ -1,0 +1,58 @@
+.content {
+  padding: 2rem 4rem;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.buttonClass {
+  text-align: center;
+}
+
+.content button {
+  background: none;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 80%;
+  box-sizing: border-box;
+
+  outline: 0.1px solid var(--store-blue);
+  background-color: var(--store-blue);
+  border-radius: 1rem;
+}
+
+.content button:hover {
+  background-color: var(--store-blue-dark);
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    padding: 2rem 2.5rem;
+  }
+  .content h1 {
+    font-size: 1.6rem;
+  }
+
+  .content button {
+    font-size: 1rem;
+    padding: 0.8rem 0.8rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .content {
+    padding: 2rem 2rem;
+  }
+  .content h1 {
+    font-size: 1.4rem;
+  }
+  .content button {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.4rem;
+  }
+}

@@ -71,4 +71,29 @@
 .storeItemsContainer {
   display: flex;
   overflow-x: scroll;
+  
+  background-clip: padding-box;  
+}
+
+/* Custom Scroll Bar */
+
+.storeItemsContainer::-webkit-scrollbar {
+  height: 8px;
+  padding: 0 5px;
+  margin: 0px 5px;
+}
+
+/* Track */
+.storeItemsContainer::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+.storeItemsContainer::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+}
+
+/* Handle on hover */
+.storeItemsContainer::-webkit-scrollbar-thumb:hover {
+  background: #606060;
 }

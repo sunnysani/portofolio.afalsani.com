@@ -8,8 +8,10 @@ import CartItem from "./CartItem";
 import { BsCartXFill } from "react-icons/bs";
 import Empty from "../etc/Empty";
 import StoreCartContext from "../../context/store-cart-context";
+import CartCheckoutModal from "./CartCheckoutModal";
 
 function CartContainer(props) {
+  const [toggleCheckoutModal, setToggleCheckoutModal] = useState(false);
   const [checkoutedItems, setCheckoutedItems] = useState(
     props.checkoutedItems ?? []
   );
@@ -41,10 +43,10 @@ function CartContainer(props) {
   });
 
   function isCheckouted(itemId) {
-    return checkoutedItems.some((item) => item === itemId);
+    return checkoutedItems.includes(itemId);
   }
 
-  function onClickButtonFunction(itemId) {
+  function onClickItemButtonFunction(itemId) {
     // delete if is in the list
     if (checkoutedItems.some((item) => item === itemId)) {
       setCheckoutedItems((prev) => prev.filter((item) => item !== itemId));
@@ -62,42 +64,74 @@ function CartContainer(props) {
     setCheckoutedItems([itemId]);
   }
 
+  function allItemAtStorePurchased(storeId) {
+    let storeItems;
+    storeItems = cartContent[storeId].items;
+    for (let i = 0; i < storeItems.length; i++) {
+      if (!checkoutedItems.includes(Object.keys(storeItems[i])[0])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function onClickStoreButtonFunction(storeId) {
+    if (allItemAtStorePurchased(storeId)) {
+      setCheckoutedItems([]);
+    } else {
+      let storeItems = cartContent[storeId].items;
+
+      setCheckoutedItems([]);
+      for (let i = 0; i < storeItems.length; i++) {
+        setCheckoutedItems((prev) => prev.concat(Object.keys(storeItems[i])[0]));
+      }
+    }
+  }
+
   return !storeCartContext.items.length ? (
     <Empty img={<BsCartXFill />}>
       <p>There is no item in your cart.</p>
       <Link to="/store">Start shoping</Link>
     </Empty>
   ) : (
-    <div className={classes.cartContainer}>
-      <div className={classes.leftSide}>
-        <Card>
-          <div className={classes.leftSideContent}>
-            {Object.entries(cartContent).map(([key, value]) => {
-              return (
-                <CartItem
-                  key={key}
-                  storeId={key}
-                  storeName={value.name}
-                  items={value.items}
-                  isCheckoutedFunction={isCheckouted}
-                  onClickButtonFunction={onClickButtonFunction}
-                />
-              );
-            })}
-          </div>
-        </Card>
+    <>
+      <div className={classes.cartContainer}>
+        <div className={classes.leftSide}>
+          <Card>
+            <div className={classes.leftSideContent}>
+              {Object.entries(cartContent).map(([key, value]) => {
+                return (
+                  <CartItem
+                    key={key}
+                    storeId={key}
+                    storeName={value.name}
+                    items={value.items}
+                    isCheckoutedFunction={isCheckouted}
+                    onClickItemButtonFunction={onClickItemButtonFunction}
+                    allItemAtStorePurchased={allItemAtStorePurchased}
+                    onClickStoreButtonFunction={onClickStoreButtonFunction}
+                  />
+                );
+              })}
+            </div>
+          </Card>
+        </div>
+        <div className={classes.rightSide}>
+          <Card>
+            <div className={classes.rightSideContent}>
+              <CartCheckout
+                items={checkoutedItems}
+                removeCheckoutItem={removeCheckoutItem}
+                setToggleCheckoutModal={setToggleCheckoutModal}
+              />
+            </div>
+          </Card>
+        </div>
       </div>
-      <div className={classes.rightSide}>
-        <Card>
-          <div className={classes.rightSideContent}>
-            <CartCheckout
-              items={checkoutedItems}
-              removeCheckoutItem={removeCheckoutItem}
-            />
-          </div>
-        </Card>
-      </div>
-    </div>
+      {toggleCheckoutModal && (
+        <CartCheckoutModal setToggleCheckoutModal={setToggleCheckoutModal} />
+      )}
+    </>
   );
 }
 

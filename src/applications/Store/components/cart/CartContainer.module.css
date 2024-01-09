@@ -50,3 +50,14 @@
     z-index: 1;
   }
 }
+
+@media screen and (min-width: 1244px) {
+  .leftSide {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  .rightSide {
+    max-width: 400px;
+  }
+}

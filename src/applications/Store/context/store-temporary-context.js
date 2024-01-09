@@ -28,22 +28,22 @@ const StoreTemporaryContext = createContext({
 
 export function StoreTemporaryProvider(props) {
   const [checkoutItems, setCheckoutItems] = useState([
-    {
-      store: { id: "store1", name: "Toko Pertama" },
-      id: "checkout1",
-      items: [
-        {
-          id: "1",
-          name: "Wizarding Cast Iron Pan",
-          quantity: 1,
-          image:
-            "https://lh3.googleusercontent.com/d/1eRwSakngKyc2dM1W8pk7wn97Il0nHXMU",
-        },
-      ],
-      totalQuantity: 1,
-      totalPrice: 5.99,
-      date: 1656661367151,
-    },
+    // {
+    //   store: { id: "store1", name: "Toko Pertama" },
+    //   id: "checkout1",
+    //   items: [
+    //     {
+    //       id: "1",
+    //       name: "Wizarding Cast Iron Pan",
+    //       quantity: 1,
+    //       image:
+    //         "https://lh3.googleusercontent.com/d/1eRwSakngKyc2dM1W8pk7wn97Il0nHXMU",
+    //     },
+    //   ],
+    //   totalQuantity: 1,
+    //   totalPrice: 5.99,
+    //   date: 1656661367151,
+    // },
   ]);
   const [purchaseItems, setPurchaseItems] = useState([]);
   const [counter, setCounter] = useState(1);

@@ -66,7 +66,7 @@ function CartCheckout(props) {
         </div>
         <button
           onClick={() => {
-            console.log("checkout!");
+            props.setToggleCheckoutModal(true)
           }}
         >
           Checkout
