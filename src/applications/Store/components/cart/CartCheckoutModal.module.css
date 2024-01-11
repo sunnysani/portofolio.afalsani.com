@@ -1,10 +1,22 @@
 .content {
+  position: relative;
   padding: 2rem 4rem;
 }
 
 .content h1 {
   font-size: 2rem;
-  margin: 0;
+  margin: 0 0 0 0.5rem;
+}
+
+.shopTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.shopTitle svg {
+  font-size: 2rem;
 }
 
 .buttonClass {
@@ -31,28 +43,105 @@
   background-color: var(--store-blue-dark);
 }
 
+.noCheckoutText {
+  margin-block-end: 0;
+}
+
+.itemRow {
+  margin: 0 0 1rem 0;
+}
+
+.itemInfo, .itemPrice {
+  padding: 0 1rem;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemInfo h3 {
+  margin: 0;
+  max-width: 80%;
+  font-size: 1.2rem;
+}
+
+.itemInfo span {
+  max-width: 20%;
+  font-size: 1rem;
+}
+
+.itemPrice p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.total {
+  text-align: center;
+}
+
+.total p {
+  margin: 0;
+}
+
+.totalItem {
+  display: flex;
+}
+
+.totalItemKey, totalItemValue {
+  width: 50%;
+}
+
+.totalItemKey {
+  text-align: right;
+}
+
+.totalItemValue {
+  text-align: left;
+  padding-left: 1rem;
+}
+
 @media screen and (max-width: 992px) {
   .content {
     padding: 2rem 2.5rem;
   }
-  .content h1 {
+  .content h1, .content svg {
     font-size: 1.6rem;
   }
-
+  
   .content button {
     font-size: 1rem;
     padding: 0.8rem 0.8rem;
+  }
+
+  .itemInfo h3 {
+    font-size: 1rem;
+  }
+
+  .itemInfo span, .itemPrice p {
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 560px) {
   .content {
     padding: 2rem 2rem;
   }
-  .content h1 {
+  .content h1, .content svg {
     font-size: 1.4rem;
   }
+
   .content button {
     font-size: 0.9rem;
     padding: 0.6rem 0.4rem;
+  }
+
+  .itemInfo h3 {
+    font-size: 0.9rem;
+  }
+
+  .itemInfo span, .itemPrice p {
+    font-size: 0.8rem;
   }
 }

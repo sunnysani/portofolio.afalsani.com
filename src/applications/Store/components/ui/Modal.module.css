@@ -15,7 +15,12 @@
 }
 
 .modalContainer {
+  overflow-y: auto;
+  max-height: 80vh;
   position: relative;
+  /* Center horizontally */
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .exit {
@@ -39,4 +44,33 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .modal {
+    padding: 2rem;
+  }
+}
+
+/* Custom Scroll Bar */
+
+.modalContainer::-webkit-scrollbar {
+  width: 8px;
+  padding: 0 5px;
+  margin: 0px 5px;
+}
+
+/* Track */
+.modalContainer::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+.modalContainer::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+}
+
+/* Handle on hover */
+.modalContainer::-webkit-scrollbar-thumb:hover {
+  background: #606060;
 }

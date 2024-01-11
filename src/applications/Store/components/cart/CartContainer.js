@@ -129,7 +129,10 @@ function CartContainer(props) {
         </div>
       </div>
       {toggleCheckoutModal && (
-        <CartCheckoutModal setToggleCheckoutModal={setToggleCheckoutModal} />
+        <CartCheckoutModal 
+          items={checkoutedItems}
+          setToggleCheckoutModal={setToggleCheckoutModal}
+        />
       )}
     </>
   );
