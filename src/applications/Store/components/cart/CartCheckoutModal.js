@@ -67,7 +67,11 @@ function CartCheckoutModal(props) {
             </div>
             <br />
             <div className={classes.buttonClass}>
-              <button>Checkout</button>
+              <button
+                onClick={() => {
+                  console.log('checkout!')
+                }}
+              >Checkout</button>
             </div>
             <br />
           </>}

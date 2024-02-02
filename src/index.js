@@ -8,19 +8,22 @@ import { StoreUsernameContextProvider } from "./applications/Store/context/store
 import { StoreActionBarContextProvider } from "./applications/Store/context/store-action-bar-context";
 import { StoreCartProvider } from "./applications/Store/context/store-cart-context";
 import { StoreTemporaryProvider } from "./applications/Store/context/store-temporary-context";
+import { StoreCheckoutProvider } from "./applications/Store/context/store-checkout-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <StoreUsernameContextProvider>
       <StoreCartProvider>
-        <StoreTemporaryProvider>
-          <StoreActionBarContextProvider>
-            <BrowserRouter>
-              <App />
-            </BrowserRouter>
-          </StoreActionBarContextProvider>
-        </StoreTemporaryProvider>
+        <StoreCheckoutProvider>
+          <StoreTemporaryProvider>
+            <StoreActionBarContextProvider>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </StoreActionBarContextProvider>
+          </StoreTemporaryProvider>
+        </StoreCheckoutProvider>
       </StoreCartProvider>
     </StoreUsernameContextProvider>
   </React.StrictMode>
